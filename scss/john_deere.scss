@@ -1,0 +1,307 @@
+$black: #000;
+$white: #FFF;
+$hr-border-color: $black;
+$yellow: #FD0;
+$red: #DB0007;
+$gray-600: #f7f7f7;
+$dark: $black;
+$light: $white;
+$font-family-base:FF_500;
+$primary: #457C1F;
+$secondary: #FD0;
+
+$enable-responsive-font-sizes: true;
+$body-bg: $primary;
+$body-color: $white;
+$border-color: $white;
+$link-color: $white;
+$link-decoration: none;
+$input-focus-border-color: rgba($yellow, .3);
+$btn-focus-box-shadow: 0 0 0 .25rem rgba($yellow,.3);
+
+$border-radius: .5rem;
+$border-radius-lg: 5px;
+$input-border-color: $black;
+$input-color: $black;
+$navbar-dark-toggler-border-color: null;
+$navbar-light-toggler-border-color: null;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 10H16.7143' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85742 5L13.8574 5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85742 15L13.8574 15' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 10H16.7143' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85742 5L13.8574 5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85742 15L13.8574 15' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$headings-font-family: FF_700;
+$font-family-sans-serif: FF_500;
+$input-btn-font-family: $font-family-base;
+
+$line-height-lg: 1.6;
+$input-btn-padding-x-lg: 2.5rem;
+$hr-opacity: 1;
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: .5;
+
+$carousel-indicator-opacity: 1;
+$carousel-indicator-width: 15px;
+$carousel-indicator-height: 15px;
+$carousel-indicator-hit-area-height: 0;
+$carousel-dark-indicator-active-bg: $yellow;
+$carousel-caption-color: $black;
+$accordion-bg:transparent;
+$accordion-border-width: 0;
+$accordion-button-active-color: $body-color;
+$accordion-button-active-bg: transparent;
+
+
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_434_1326)'%3E%3Cpath d='M13.5441 9.02944H4.5145' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.0293 4.51465V13.5442' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_434_1326'%3E%3Crect width='12.7698' height='12.7698' fill='white' transform='translate(9.0293) rotate(45)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+$accordion-button-active-icon: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_434_1326)'%3E%3Cpath d='M13.5441 9.02944H4.5145' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_434_1326'%3E%3Crect width='12.7698' height='12.7698' fill='white' transform='translate(9.0293) rotate(45)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+$accordion-button-focus-border-color: $yellow;
+$utilities: (
+  "font-weight": (
+    property: font-family,
+    class: fw,
+    values: (
+      normal: 'FF_400',
+      regular: 'FF_500',
+      bold: 'FF_700',
+    )
+  )
+);
+$dropdown-padding-y: 0;
+$dropdown-spacer: 0;
+$dropdown-border-width:0;
+$dropdown-border-radius: 0;
+//
+// Import Bootstrap
+//
+
+@import "bootstrap/scss/bootstrap";
+
+
+.btn{
+  white-space: nowrap;
+}
+$s2bs5-bg: rgba($gray-600,.9);
+$s2bs5-focus-border-color:$black;
+$s2bs5-item-active-bg:#ECECEC;
+$s2bs5-item-hover-bg:#ECECEC;
+$s2bs5-item-focus-bg: #ECECEC;
+$s2bs5-border-radius:0;
+$s2bs5-placeholder-color:$black;
+
+$s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L4.5 5L1 1' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+//
+// Import Bootstrap theme for select2
+//
+@import "../node_modules/select2/src/scss/core";
+@import "../node_modules/select2-bootstrap-5-theme/src/include-all";
+
+
+.select2-container--bootstrap-5 {
+  // Dropdown
+  .select2-dropdown {
+      // Items
+
+      /* Works on Chrome, Edge, and Safari */
+      .select2-results__options::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .select2-results__options::-webkit-scrollbar-track {
+        background: #2D2D2D80;
+        border-radius: 20px;
+      }
+
+      .select2-results__options::-webkit-scrollbar-thumb {
+        background-color: #2D2D2D;
+        border-radius: 20px;
+      }
+      .select2-results__options {
+          // Item
+
+          /* Works on Firefox */
+          scrollbar-width: thin;
+          scrollbar-color: #2D2D2D #2D2D2D80;
+          .select2-results__option {
+              // Highlighted Item
+              &.select2-results__option--highlighted,
+              &.select2-results__option--selected,
+              &[aria-selected="true"]:not(.select2-results__option--highlighted) {
+                  font-family: 'FF_700';
+              }
+            }
+      }
+
+  }
+  &.select2-container--open {
+      // Set border color & box shadow
+      .select2-selection {
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 8.5L1.5 5L5.5 1.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+  }
+}
+
+
+//
+// Import Bootstrap Icons w/ custom path to fonts folder
+//
+
+$bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+
+//
+// Custom styles
+//
+.search-input {
+  border-bottom: 1px solid black;
+}
+
+.search-input input::placeholder {
+  /*text-align: end;*/
+  color: black;
+  /*font-size: 2rem;*/
+  /*line-height: 2.528rem;*/
+}
+.main-title{
+  text-align: center;
+  margin-top:4.7rem;
+  margin-bottom:3rem;
+  font-size: calc(2rem + 1.5vw) !important;
+  line-height: 2.955rem;
+  font-family: FF_700;
+}
+
+svg.bi {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+@media (min-width: 768px) {
+  svg.bi {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+//scrollbar color
+/* Works on Chrome, Edge, and Safari */
+.mc_donalds_scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mc_donalds_scrollbar::-webkit-scrollbar-track {
+  background: #2D2D2D80;
+  border-radius: 20px;
+}
+
+.mc_donalds_scrollbar::-webkit-scrollbar-thumb {
+  background-color: #2D2D2D;
+  border-radius: 20px;
+}
+.mc_donalds_scrollbar {
+    /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #2D2D2D #2D2D2D80;
+}
+//scrollbar color
+
+.position-sticky{
+  top:.5rem;
+}
+
+strong{
+  font-family: FF_700, sans-serif;
+  font-weight: normal;
+}
+.cover-container{
+  background: lightgray var(--bg-url) 50% / cover no-repeat;
+  position: relative;
+}
+.body-container{
+  max-width: 18rem;
+  margin: 0 auto;
+}
+.bg-primary-blur{
+  background: $primary;
+  backdrop-filter: blur(20px);
+}
+.bg-gradient-blur{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 70.31%);
+  background-size: cover;
+  backdrop-filter: blur(30px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.z-10{
+  z-index: 10;
+}
+.fs-7{
+  font-size: 0.85rem;
+}
+.icon-1{
+  width: 1rem;
+  height: 1rem;
+}
+.icon-2{
+  width: 2rem;
+  height: 2rem;
+}
+.icon-3{
+  width: 3rem;
+  height: 3rem;
+}
+.text-pen-marker {
+  position: relative;
+  svg, .svg {
+    width: calc(100% + 5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.text-underline-marker {
+  position: relative;
+  font-family: "FF_700",sans-serif;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='522' height='12' viewBox='0 0 522 12' fill='none'%3E%3Cpath d='M345.708 1.04379C352.812 1.09819 377.967 1.40913 394.094 1.46542C431.414 1.59194 468.741 1.82142 505.957 3.10399C511.775 3.30591 521.666 3.38004 521.449 6.70272C521.22 10.1604 514.586 12.1347 504.44 11.945C479.884 11.4818 455.203 10.5347 430.763 10.99C395.011 11.6546 359.323 10.9658 323.611 10.9289C291.545 10.8956 259.469 10.5243 227.405 10.5234C197.285 10.5203 167.172 11.0932 137.064 10.8788C111.077 10.6931 85.1082 9.679 59.1137 9.21399C52.9949 9.10436 45.6252 9.67463 38.9164 9.58232C33.3693 9.50506 24.1185 9.42325 18.6245 9.10295C16.2535 8.96333 13.7899 8.78995 11.4672 8.9008C0.789918 9.39332 -2.02343 8.1744 1.57039 4.39873C2.36179 3.56775 1.46088 2.46956 4.04614 1.9132C4.15396 1.89137 4.36674 1.84474 4.46308 1.81392C12.3035 -0.441465 20.3268 0.676136 28.417 0.669425C68.1183 0.647793 107.828 0.855469 147.532 0.980805C171.894 1.05614 196.285 1.34935 220.604 1.04792C227.263 0.96613 233.925 0.511228 240.682 0.842311L240.566 0.84051C247.618 0.767741 254.673 0.586324 261.723 0.636938C288.398 0.830431 316.258 0.704408 341.854 1.1603C342.862 1.17594 344.224 1.03252 345.708 1.04379Z' fill='%23FFDD00'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  padding: 3px 0;
+}
+.text-arrow-up {
+  position: relative;
+  font-family: 'FF_700', sans-serif;
+  svg, .svg {
+    width: calc(50%);
+    position: absolute;
+    top: -100%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+}
+.text-arrow-down {
+  position: relative;
+  font-family: 'FF_700', sans-serif;
+  color: $yellow;
+  svg, .svg {
+    width: calc(70%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(60%);
+  }
+}
+.img-brand{
+  width: 10rem;
+  height: 10rem;
+}
+@import "../node_modules/slick-carousel/slick/slick.scss";
+
+// @import "../node_modules/slick-carousel/slick/slick-theme.scss";

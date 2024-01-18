@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'FF_400';
+	src: url(../../assets/fonts/JDSansPro.woff2) format('woff2'),
+	url(../../assets/fonts/JDSansPro.woff) format('woff'),
+	url(../../assets/fonts/JDSansPro.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
