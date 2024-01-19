@@ -37,6 +37,10 @@ $hr-opacity: 1;
 $carousel-control-opacity: 1;
 $carousel-control-hover-opacity: .5;
 
+$form-check-input-bg: rgba(255, 255, 255, 0.30);
+$form-check-radio-border-radius: .3rem;
+
+
 $carousel-indicator-opacity: 1;
 $carousel-indicator-width: 15px;
 $carousel-indicator-height: 15px;
@@ -301,6 +305,9 @@ strong{
 .img-brand{
   width: 10rem;
   height: 10rem;
+}
+.form-check-input{
+  margin-top: 0;
 }
 @import "../node_modules/slick-carousel/slick/slick.scss";
 
