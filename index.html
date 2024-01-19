@@ -29,37 +29,6 @@
     <div class="slides">
         <section class="h-100">
             <div class="cover-container d-flex w-100 h-100 mx-auto flex-column"
-                 style="--bg-url: url('/assets/img/banners/7.png')">
-                <div class="bg-gradient-2"></div>
-                <main class="z-10 h-100 d-flex flex-column pt-3 pb-3">
-                    <div>
-                        <div class="d-flex justify-content-start" style="visibility: hidden">
-                            <a class="ms-1 btn btn-outline-light border-0 d-inline-flex justify-content-start align-items-center">
-                                <img alt="back arrow" class="icon-1" width="20" height="21"
-                                     src="assets/img/svg/back.svg">
-                                <span class="text-black mb-0">Atrás</span>
-                            </a>
-                        </div>
-                        <a href="">
-                            <img alt="automaq john deere logo" class="img-brand" width="330" height="336"
-                                 src="assets/img/svg/logo-white.svg">
-                        </a>
-                    </div>
-                    <div class="body-container h-100 d-flex flex-column align-items-center justify-content-end">
-                        <div class="loader"></div>
-                        <p class="my-5 fs-4">
-                            Con el <strong>Acuerdo de Mantenimiento Preventivo</strong>
-                            tenés <strong>Atención Preferencial</strong> los
-                            <strong>365 días del año</strong>
-                        </p>
-
-                    </div>
-                </main>
-            </div>
-        </section>
-
-        <section class="h-100">
-            <div class="cover-container d-flex w-100 h-100 mx-auto flex-column"
                  style="--bg-url: url('/assets/img/banners/1.png')">
                 <div class="bg-gradient-blur"></div>
                 <main class="z-10 h-100 d-flex flex-column justify-content-between pt-1 pb-3">
@@ -94,8 +63,11 @@
                     </div>
                     <div class="">
                         <a href="#" class="">
-                            <img alt="hand pointing up" class="icon-3" width="105" height="105"
+                            <div class="swipe">
+                                <div class="path"></div>
+                                <img alt="hand pointing up" class="icon-3 hand-icon" width="105" height="105"
                                  src="assets/img/svg/hand-up.svg">
+                            </div>
                             <strong class="d-block fs-7">Deslizá para conocer</strong>
                         </a>
                     </div>
@@ -143,8 +115,11 @@
 
                     <div class="">
                         <a href="#" class="">
-                            <img alt="hand pointing up" class="icon-3" width="105" height="105"
+                            <div class="swipe">
+                                <div class="path"></div>
+                                <img alt="hand pointing up" class="icon-3 hand-icon" width="105" height="105"
                                  src="assets/img/svg/hand-up.svg">
+                            </div>
                             <strong class="d-block fs-7">Deslizá para conocer</strong>
                         </a>
                     </div>
@@ -188,8 +163,11 @@
 
                     <div class="">
                         <a href="#" class="">
-                            <img alt="hand pointing up" class="icon-3" width="105" height="105"
+                            <div class="swipe">
+                                <div class="path"></div>
+                                <img alt="hand pointing up" class="icon-3 hand-icon" width="105" height="105"
                                  src="assets/img/svg/hand-up.svg">
+                            </div>
                             <strong class="d-block fs-7">Deslizá para conocer</strong>
                         </a>
                     </div>
@@ -251,8 +229,11 @@
 
                     <div class="">
                         <a href="#" class="">
-                            <img alt="hand pointing up" class="icon-3" width="105" height="105"
+                            <div class="swipe">
+                                <div class="path"></div>
+                                <img alt="hand pointing up" class="icon-3 hand-icon" width="105" height="105"
                                  src="assets/img/svg/hand-up.svg">
+                            </div>
                             <strong class="d-block fs-7">Deslizá para conocer</strong>
                         </a>
                     </div>
@@ -314,8 +295,11 @@
 
                     <div class="">
                         <a href="#" class="">
-                            <img alt="hand pointing up" class="icon-3" width="105" height="105"
+                            <div class="swipe">
+                                <div class="path"></div>
+                                <img alt="hand pointing up" class="icon-3 hand-icon" width="105" height="105"
                                  src="assets/img/svg/hand-up.svg">
+                            </div>
                             <strong class="d-block fs-7">Deslizá para conocer</strong>
                         </a>
                     </div>
@@ -373,8 +357,11 @@
 
                     <div class="">
                         <a href="#" class="">
-                            <img alt="hand pointing up" class="icon-3" width="105" height="105"
+                            <div class="swipe">
+                                <div class="path"></div>
+                                <img alt="hand pointing up" class="icon-3 hand-icon" width="105" height="105"
                                  src="assets/img/svg/hand-up.svg">
+                            </div>
                             <strong class="d-block fs-7">Deslizá para conocer</strong>
                         </a>
                     </div>
@@ -634,5 +621,18 @@
             }
         }
     }
+    window.onload = () => {
+    const pathElements = document.querySelectorAll(".path");
+    const handIconElements = document.querySelectorAll(".hand-icon");
+
+    pathElements.forEach((pathElement, index) => {
+        pathElement.style.animation = `swipe-dot 2s 0.5s infinite`;
+    });
+
+    handIconElements.forEach((handIconElement) => {
+        handIconElement.style.animation = "swipe-hand 2s infinite";
+    });
+}
+
 </script>
 </body>
