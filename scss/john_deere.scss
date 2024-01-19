@@ -21,8 +21,15 @@ $btn-focus-box-shadow: 0 0 0 .25rem rgba($yellow,.3);
 
 $border-radius: .5rem;
 $border-radius-lg: 5px;
-$input-border-color: $black;
+
+$form-label-color: $primary;
+$input-border-color: $white;
+$input-bg: $white;
 $input-color: $black;
+$input-group-addon-bg: $white;
+$input-placeholder-color: #D0D0D0;
+
+
 $navbar-dark-toggler-border-color: null;
 $navbar-light-toggler-border-color: null;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 10H16.7143' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85742 5L13.8574 5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85742 15L13.8574 15' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -166,7 +173,7 @@ $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 6px solid white;
+  border: 6px solid currentColor;
   animation:
           l20-1 0.8s infinite linear alternate,
           l20-2 1.6s infinite linear;
@@ -335,12 +342,21 @@ strong{
   width: 100%;
   z-index: 0;
 }
+.form-gradient{
+  border-radius: 1rem;
+  background: rgba(116, 116, 116, 0.10);
+  backdrop-filter: blur(30px);
+  padding: 1.5rem;
+}
 
 .z-10{
   z-index: 10;
 }
 .fs-7{
   font-size: 0.85rem;
+}
+.fs-8{
+  font-size: 0.65rem;
 }
 
 .text-pen-marker {
@@ -393,14 +409,17 @@ strong{
 .form-check-input{
   margin-top: 0;
 }
-.video-container {
+.video-container, .map-container {
   position: relative;
   border-radius: .6rem;
   border: 6px solid #FFF;
   overflow: hidden;
 }
+.map-container{
+  min-height: 40vh;
+}
 
-.video-frame {
+.video-frame, .map-frame {
   width: 100%;
   height: 100%;
 }
