@@ -78,6 +78,17 @@ $dropdown-border-radius: 0;
 
 @import "bootstrap/scss/bootstrap";
 
+@mixin icon-size($size) {
+  .icon-#{$size} {
+    width: #{$size}rem;
+    height: #{$size}rem;
+  }
+}
+
+@include icon-size(1);
+@include icon-size(2);
+@include icon-size(3);
+@include icon-size(4);
 
 .btn{
   white-space: nowrap;
@@ -240,6 +251,18 @@ strong{
   width: 100%;
   z-index: 0;
 }
+.bg-gradient{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 30.73%, rgba(0, 0, 0, 0.00) 78.65%);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
 
 .z-10{
   z-index: 10;
@@ -247,18 +270,7 @@ strong{
 .fs-7{
   font-size: 0.85rem;
 }
-.icon-1{
-  width: 1rem;
-  height: 1rem;
-}
-.icon-2{
-  width: 2rem;
-  height: 2rem;
-}
-.icon-3{
-  width: 3rem;
-  height: 3rem;
-}
+
 .text-pen-marker {
   position: relative;
   svg, .svg {
@@ -309,6 +321,68 @@ strong{
 .form-check-input{
   margin-top: 0;
 }
+.video-container {
+  position: relative;
+  border-radius: .6rem;
+  border: 6px solid #FFF;
+  overflow: hidden;
+}
+
+.video-frame {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(125,125,125,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay svg {
+  fill: #FFF; /* Set the color of the SVG */
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  .menu-item {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    border: 5px solid white;
+    border-radius: 12px;
+    &:hover, &:focus{
+      border-color: $primary;
+      span{
+        color: $primary;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    span{
+      text-transform: uppercase;
+      color: black;
+      font-family: "FF_700", sans-serif;
+    }
+  }
+}
+
+
 @import "../node_modules/slick-carousel/slick/slick.scss";
 
 // @import "../node_modules/slick-carousel/slick/slick-theme.scss";
