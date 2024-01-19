@@ -93,15 +93,16 @@ $dropdown-border-radius: 0;
 .btn{
   white-space: nowrap;
 }
-$s2bs5-bg: rgba($gray-600,.9);
-$s2bs5-focus-border-color:$black;
+$s2bs5-bg: #fff;
+$s2bs5-focus-border-color:#fff;
 $s2bs5-item-active-bg:#ECECEC;
 $s2bs5-item-hover-bg:#ECECEC;
 $s2bs5-item-focus-bg: #ECECEC;
-$s2bs5-border-radius:0;
+//$s2bs5-border-radius:0;
+$s2bs5-border-width: 0;
 $s2bs5-placeholder-color:$black;
 
-$s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L4.5 5L1 1' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L4.5 5L1 1' stroke='#457c1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 //
 // Import Bootstrap theme for select2
 //
@@ -120,12 +121,12 @@ $s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 
       }
 
       .select2-results__options::-webkit-scrollbar-track {
-        background: #2D2D2D80;
+        background: #d9d9d9;
         border-radius: 20px;
       }
 
       .select2-results__options::-webkit-scrollbar-thumb {
-        background-color: #2D2D2D;
+        background-color: #457c1f;
         border-radius: 20px;
       }
       .select2-results__options {
@@ -133,7 +134,7 @@ $s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 
 
           /* Works on Firefox */
           scrollbar-width: thin;
-          scrollbar-color: #2D2D2D #2D2D2D80;
+          scrollbar-color: #457c1f #d9d9d9;
           .select2-results__option {
               // Highlighted Item
               &.select2-results__option--highlighted,
@@ -148,7 +149,7 @@ $s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 
   &.select2-container--open {
       // Set border color & box shadow
       .select2-selection {
-        background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 8.5L1.5 5L5.5 1.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 8.5L1.5 5L5.5 1.5' stroke='#457c1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
       }
   }
 }
@@ -161,7 +162,30 @@ $s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 
 $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
 
-
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid white;
+  animation:
+          l20-1 0.8s infinite linear alternate,
+          l20-2 1.6s infinite linear;
+}
+@keyframes l20-1{
+  0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+  12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+  25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+  50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+  62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+  75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+  100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+}
+@keyframes l20-2{
+  0%    {transform:scaleY(1)  rotate(0deg)}
+  49.99%{transform:scaleY(1)  rotate(135deg)}
+  50%   {transform:scaleY(-1) rotate(0deg)}
+  100%  {transform:scaleY(-1) rotate(-135deg)}
+}
 //
 // Custom styles
 //
@@ -253,6 +277,18 @@ strong{
 }
 .bg-gradient{
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 30.73%, rgba(0, 0, 0, 0.00) 78.65%);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.bg-gradient-2{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.37) 100%);
   background-size: cover;
   position: absolute;
   top: 0;
