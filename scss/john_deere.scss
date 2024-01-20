@@ -195,8 +195,8 @@ $s2bs5-indicator:url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 
 // Import Bootstrap Icons w/ custom path to fonts folder
 //
 
-$bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
-@import "bootstrap-icons/font/bootstrap-icons";
+//$bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
+//@import "bootstrap-icons/font/bootstrap-icons";
 
 .loader {
   width: 50px;
@@ -303,7 +303,9 @@ strong{
 .cover-container{
   background: lightgray var(--bg-url) 50% / cover no-repeat;
   position: relative;
-  overflow: hidden auto;
+}
+.cover-container:not(.beneficio){
+  overflow-y: auto !important;
   scrollbar-width: thin;
   scrollbar-color: #457c1f #d9d9d9;
   &::-webkit-scrollbar {
