@@ -7,6 +7,7 @@ $gray-600: #f7f7f7;
 $dark: $black;
 $light: $white;
 $font-family-base:FF_500;
+
 $primary: #457C1F;
 $secondary: #FD0;
 
@@ -29,6 +30,30 @@ $input-color: $black;
 $input-group-addon-bg: $white;
 $input-placeholder-color: #D0D0D0;
 
+$font-size-base:              1.17rem;
+$font-size-sm:                $font-size-base * .67;
+$font-size-lg:                $font-size-base * 1.33;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.67;
+$h5-font-size:                $font-size-base * 1.33;
+$h6-font-size:                $font-size-base * 1.17;
+$h7-font-size:                $font-size-base * .833;
+$h8-font-size:                $font-size-base * .75;
+$h9-font-size:                $font-size-base * .5;
+$font-sizes: (
+        1: $h1-font-size,
+        2: $h2-font-size,
+        3: $h3-font-size,
+        4: $h4-font-size,
+        5: $h5-font-size,
+        6: $h6-font-size,
+        7: $h7-font-size,
+        8: $h8-font-size,
+        9: $h9-font-size,
+);
 
 $navbar-dark-toggler-border-color: null;
 $navbar-light-toggler-border-color: null;
@@ -96,6 +121,10 @@ $dropdown-border-radius: 0;
 @include icon-size(2);
 @include icon-size(3);
 @include icon-size(4);
+.icon{
+  width: 1.875rem;
+  height: 1.875rem;
+}
 
 .btn{
   white-space: nowrap;
@@ -242,46 +271,24 @@ $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
   /*font-size: 2rem;*/
   /*line-height: 2.528rem;*/
 }
-.main-title{
-  text-align: center;
-  margin-top:4.7rem;
-  margin-bottom:3rem;
-  font-size: calc(2rem + 1.5vw) !important;
-  line-height: 2.955rem;
-  font-family: FF_700;
-}
 
-svg.bi {
-  width: 1.9rem;
-  height: 1.9rem;
-}
 
-@media (min-width: 768px) {
-  svg.bi {
-    width: 2rem;
-    height: 2rem;
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #457c1f #d9d9d9;
+  &::-webkit-scrollbar {
+    width: 10px;
   }
-}
 
-//scrollbar color
-/* Works on Chrome, Edge, and Safari */
-.mc_donalds_scrollbar::-webkit-scrollbar {
-  width: 10px;
-}
+  &::-webkit-scrollbar-track {
+    background: #d9d9d9;
+    border-radius: 20px;
+  }
 
-.mc_donalds_scrollbar::-webkit-scrollbar-track {
-  background: #2D2D2D80;
-  border-radius: 20px;
-}
-
-.mc_donalds_scrollbar::-webkit-scrollbar-thumb {
-  background-color: #2D2D2D;
-  border-radius: 20px;
-}
-.mc_donalds_scrollbar {
-    /* Works on Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: #2D2D2D #2D2D2D80;
+  &::-webkit-scrollbar-thumb {
+    background-color: #457c1f;
+    border-radius: 20px;
+  }
 }
 //scrollbar color
 
@@ -296,6 +303,22 @@ strong{
 .cover-container{
   background: lightgray var(--bg-url) 50% / cover no-repeat;
   position: relative;
+  overflow: hidden auto;
+  scrollbar-width: thin;
+  scrollbar-color: #457c1f #d9d9d9;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d9d9d9;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #457c1f;
+    border-radius: 20px;
+  }
 }
 .body-container{
   max-width: 18rem;
@@ -352,12 +375,6 @@ strong{
 .z-10{
   z-index: 10;
 }
-.fs-7{
-  font-size: 0.85rem;
-}
-.fs-8{
-  font-size: 0.65rem;
-}
 
 .text-pen-marker {
   position: relative;
@@ -403,8 +420,13 @@ strong{
   }
 }
 .img-brand{
-  width: 10rem;
-  height: 10rem;
+  width: 7rem;
+  height: 7rem;
+}
+.img-custom{
+  width: 11.3rem;
+  height: 10.2rem;
+  object-fit: contain;
 }
 .form-check-input{
   margin-top: 0;
