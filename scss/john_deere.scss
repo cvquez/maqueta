@@ -303,9 +303,14 @@ strong{
 .cover-container{
   background: lightgray var(--bg-url) 50% / cover no-repeat;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 .cover-container:not(.beneficio){
-  overflow-y: auto !important;
+  // overflow-y: auto !important;
   scrollbar-width: thin;
   scrollbar-color: #457c1f #d9d9d9;
   &::-webkit-scrollbar {
@@ -327,6 +332,11 @@ strong{
   width: 100%;
   padding: 0 .5rem;
   margin: 0 auto;
+}
+footer{
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 }
 .bg-primary-blur{
   background: $primary;
